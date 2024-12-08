@@ -14,7 +14,7 @@ function belongsToSubnet(host, list) {
   // Binary search
   var x = 0, y = list.length, middle;
   while (y - x > 1) {
-    middle = Math.floor((x + y) / 2);
+    middle = ((x + y) / 2) | 0 ;
     if (list[middle][0] <= ip)
       x = middle;
     else
